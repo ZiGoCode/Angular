@@ -10,6 +10,7 @@ import { UiCaredComponent } from './components/ui-cared/ui-cared.component';
 import { WidgetsComponent } from './components/widgets/widgets.component';
 import { MambersComponent } from './components/mambers/mambers.component';
 import { MamberCreateComponent } from './components/mamber-create/mamber-create.component';
+import { ChangePasswordComponent } from './components/profile/change-password/change-password.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { MamberCreateComponent } from './components/mamber-create/mamber-create.
     UiCaredComponent,
     WidgetsComponent,
     MambersComponent,
-    MamberCreateComponent
+    MamberCreateComponent,
+    ChangePasswordComponent
     ]
 })
 export class AuthenticationModule { }

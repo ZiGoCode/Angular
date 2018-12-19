@@ -25,7 +25,7 @@
             <i class="fa fa-edit"></i>แก้ไขข้อมูลส่วนตัว
           </h3>
           <p>
-            <button type="butoom" class="btn btn-primary icon-btn">
+            <button (click)="openModal(template)" type="butoom" class="btn btn-primary icon-btn">
               <i class="fa fa-key"></i>เปลี่ยนรหัสผ่าน
             </button>
           </p>
@@ -36,8 +36,9 @@
             <div class="row">
               <div class="col-sm-4">
                 <div class="form-group">
-                  <img *ngIf="!form.value.image" src="../assets/img/default-user-image.png" class="img-fluid img-thumbnail">
-                  <img *ngIf="form.value.image" [src]="form.value.image" class="img-fluid img-thumbnail">
+                  <img width="250px" height="250px" *ngIf="!form.value.image" src="../assets/img/default-user-image.png"
+                    class="img-fluid img-thumbnail">
+                  <img width="250px" height="250px" *ngIf="form.value.image" [src]="form.value.image" class="img-fluid img-thumbnail">
                 </div>
                 <div class="form-group">
                   <input type="file" (change)="onConvertImage(inputFile)" #inputFile>
@@ -90,3 +91,7 @@
     </div>
   </div>
 </app-auth-content>
+
+<ng-template #template>
+  <app-change-password [modalRef]="modalRef"></app-change-password>
+</ng-template>
